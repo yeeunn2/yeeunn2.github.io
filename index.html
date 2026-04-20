@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>실뭉치 — 뜨개질 시작하기</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#hero" class="nav__logo">실뭉치</a>
+      <nav class="nav__links">
+        <a href="#pattern" class="nav__link">도안 보는 법</a>
+        <a href="#tutorial" class="nav__link">튜토리얼</a>
+        <a href="#faq" class="nav__link">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="container hero__inner">
+      <div class="hero__text">
+        <p class="hero__pretitle">🧶 뜨개질 입문 가이드</p>
+        <h1 class="hero__headline">처음 시작하는 뜨개질,<br />어렵지 않아요</h1>
+        <p class="hero__sub">도안 읽는 법부터 기초 기술까지<br />한 곳에서 쉽게 배워보세요</p>
+        <a href="#pattern" class="btn btn--primary hero__cta">지금 시작하기</a>
+      </div>
+      <div class="hero__deco" aria-hidden="true">
+        <div class="yarn-ball">
+          <div class="yarn-ball__circle"></div>
+          <div class="yarn-ball__line yarn-ball__line--1"></div>
+          <div class="yarn-ball__line yarn-ball__line--2"></div>
+          <div class="yarn-ball__line yarn-ball__line--3"></div>
+          <div class="yarn-ball__needle yarn-ball__needle--1"></div>
+          <div class="yarn-ball__needle yarn-ball__needle--2"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 도안 보는 법 -->
+  <section class="section section--sand" id="pattern">
+    <div class="container">
+      <h2 class="section__title">도안 보는 법</h2>
+      <p class="section__desc">복잡해 보이는 도안 기호, 한 번만 익히면 누구나 읽을 수 있어요</p>
+
+      <div class="tab-group">
+        <button class="tab-btn tab-btn--active" data-tab="needle">대바늘 도안</button>
+        <button class="tab-btn" data-tab="crochet">코바늘 도안</button>
+      </div>
+
+      <!-- 대바늘 -->
+      <div class="tab-panel tab-panel--active" id="tab-needle">
+        <div class="pattern-split">
+          <div class="pattern-split__table">
+            <h3 class="pattern-split__title">기호 표</h3>
+            <table class="symbol-table">
+              <thead>
+                <tr><th>기호</th><th>명칭</th><th>뜻</th></tr>
+              </thead>
+              <tbody>
+                <tr><td class="sym">□</td><td>겉뜨기</td><td>앞에서 바늘을 넣어 뜨는 기본 코</td></tr>
+                <tr><td class="sym">—</td><td>안뜨기</td><td>안쪽에서 바늘을 넣어 뜨는 코</td></tr>
+                <tr><td class="sym">○</td><td>걸기코</td><td>바늘에 실을 한 바퀴 감아 코를 늘림</td></tr>
+                <tr><td class="sym">∧</td><td>오른코 줄이기</td><td>두 코를 오른쪽 방향으로 합침</td></tr>
+                <tr><td class="sym">∨</td><td>왼코 줄이기</td><td>두 코를 왼쪽 방향으로 합침</td></tr>
+                <tr><td class="sym">×</td><td>교차뜨기</td><td>두 코의 순서를 바꿔 교차</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="pattern-split__sample">
+            <h3 class="pattern-split__title">미니 도안 샘플</h3>
+            <div class="mini-pattern">
+              <div class="mini-pattern__grid">
+                <div class="mini-pattern__row">
+                  <span class="cell cell--knit" title="겉뜨기">□</span>
+                  <span class="cell cell--purl" title="안뜨기">—</span>
+                  <span class="cell cell--knit" title="겉뜨기">□</span>
+                  <span class="cell cell--purl" title="안뜨기">—</span>
+                  <span class="cell cell--knit" title="겉뜨기">□</span>
+                </div>
+                <div class="mini-pattern__row">
+                  <span class="cell cell--purl" title="안뜨기">—</span>
+                  <span class="cell cell--knit" title="겉뜨기">□</span>
+                  <span class="cell cell--yo" title="걸기코">○</span>
+                  <span class="cell cell--knit" title="겉뜨기">□</span>
+                  <span class="cell cell--purl" title="안뜨기">—</span>
+                </div>
+                <div class="mini-pattern__row">
+                  <span class="cell cell--knit" title="겉뜨기">□</span>
+                  <span class="cell cell--dec" title="코줄이기">∧</span>
+                  <span class="cell cell--knit" title="겉뜨기">□</span>
+                  <span class="cell cell--dec" title="코줄이기">∨</span>
+                  <span class="cell cell--knit" title="겉뜨기">□</span>
+                </div>
+                <div class="mini-pattern__row">
+                  <span class="cell cell--purl" title="안뜨기">—</span>
+                  <span class="cell cell--knit" title="겉뜨기">□</span>
+                  <span class="cell cell--purl" title="안뜨기">—</span>
+                  <span class="cell cell--knit" title="겉뜨기">□</span>
+                  <span class="cell cell--purl" title="안뜨기">—</span>
+                </div>
+              </div>
+              <p class="mini-pattern__desc">
+                ↑ 도안은 <strong>아래에서 위로</strong>, 홀수 단은 <strong>오른쪽→왼쪽</strong>으로 읽어요.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 코바늘 -->
+      <div class="tab-panel" id="tab-crochet">
+        <div class="pattern-split">
+          <div class="pattern-split__table">
+            <h3 class="pattern-split__title">기호 표</h3>
+            <table class="symbol-table">
+              <thead>
+                <tr><th>기호</th><th>명칭</th><th>뜻</th></tr>
+              </thead>
+              <tbody>
+                <tr><td class="sym">○</td><td>사슬뜨기</td><td>기초 사슬을 만드는 기본 코</td></tr>
+                <tr><td class="sym">+</td><td>짧은뜨기</td><td>가장 기본적인 코바늘 기법</td></tr>
+                <tr><td class="sym">T</td><td>긴뜨기</td><td>짧은뜨기보다 한 단 높은 코</td></tr>
+                <tr><td class="sym">⊤</td><td>한길긴뜨기</td><td>실을 한 번 감아 뜨는 코</td></tr>
+                <tr><td class="sym">⊞</td><td>두길긴뜨기</td><td>실을 두 번 감아 뜨는 코</td></tr>
+                <tr><td class="sym">△</td><td>늘리기</td><td>한 코에서 두 코를 만들어 코를 늘림</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="pattern-split__sample">
+            <h3 class="pattern-split__title">미니 도안 샘플</h3>
+            <div class="mini-pattern mini-pattern--crochet">
+              <svg viewBox="0 0 180 120" class="crochet-svg" aria-label="코바늘 도안 샘플">
+                <!-- 중심 -->
+                <circle cx="90" cy="60" r="6" fill="none" stroke="#F28C38" stroke-width="2"/>
+                <!-- 1단: 짧은뜨기 6코 -->
+                <text x="90" y="28" text-anchor="middle" font-size="14" fill="#C96B1A">+</text>
+                <text x="118" y="40" text-anchor="middle" font-size="14" fill="#C96B1A">+</text>
+                <text x="118" y="80" text-anchor="middle" font-size="14" fill="#C96B1A">+</text>
+                <text x="90" y="96" text-anchor="middle" font-size="14" fill="#C96B1A">+</text>
+                <text x="62" y="80" text-anchor="middle" font-size="14" fill="#C96B1A">+</text>
+                <text x="62" y="40" text-anchor="middle" font-size="14" fill="#C96B1A">+</text>
+                <!-- 사슬 -->
+                <circle cx="90" cy="14" r="4" fill="none" stroke="#F5C842" stroke-width="1.5"/>
+                <circle cx="132" cy="32" r="4" fill="none" stroke="#F5C842" stroke-width="1.5"/>
+                <circle cx="132" cy="88" r="4" fill="none" stroke="#F5C842" stroke-width="1.5"/>
+                <circle cx="90" cy="110" r="4" fill="none" stroke="#F5C842" stroke-width="1.5"/>
+                <circle cx="48" cy="88" r="4" fill="none" stroke="#F5C842" stroke-width="1.5"/>
+                <circle cx="48" cy="32" r="4" fill="none" stroke="#F5C842" stroke-width="1.5"/>
+              </svg>
+              <p class="mini-pattern__desc">
+                ↑ 코바늘 원형 도안은 <strong>중심에서 바깥</strong>으로, <strong>반시계 방향</strong>으로 읽어요.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 기초 튜토리얼 -->
+  <section class="section" id="tutorial">
+    <div class="container">
+      <h2 class="section__title">기초 튜토리얼</h2>
+      <p class="section__desc">영상으로 따라하면 훨씬 쉬워요. 난이도 순으로 골라보세요</p>
+
+      <div class="tab-group" id="tutorial-tabs">
+        <button class="tab-btn tab-btn--active" data-filter="all">전체</button>
+        <button class="tab-btn" data-filter="needle">대바늘</button>
+        <button class="tab-btn" data-filter="crochet">코바늘</button>
+      </div>
+
+      <div class="card-grid" id="tutorial-grid">
+
+        <!-- 와이드 카드 (추천) -->
+        <article class="card card--wide" data-category="needle">
+          <div class="card__thumb">
+            <iframe
+              src="https://www.youtube.com/embed/p_R1UDsNOMk"
+              title="대바늘 기초 완벽 정리"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="card__body">
+            <div class="card__meta">
+              <span class="badge badge--intro">입문</span>
+              <span class="card__duration">23분</span>
+            </div>
+            <h3 class="card__title">대바늘 기초 완벽 정리 — 시작부터 마무리까지</h3>
+            <p class="card__desc">실 걸기, 코 만들기, 겉뜨기·안뜨기까지 처음 시작하는 분을 위한 완전 입문 영상</p>
+          </div>
+        </article>
+
+        <!-- 일반 카드들 -->
+        <article class="card" data-category="needle">
+          <div class="card__thumb">
+            <iframe
+              src="https://www.youtube.com/embed/mzGbFJGxmhM"
+              title="코 만들기 기초"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="card__body">
+            <div class="card__meta">
+              <span class="badge badge--intro">입문</span>
+              <span class="card__duration">12분</span>
+            </div>
+            <h3 class="card__title">코 만들기 — 작품의 첫 시작</h3>
+            <p class="card__desc">손가락으로 코 잡기, 코바늘로 코 잡기 두 가지 방법을 비교 설명</p>
+          </div>
+        </article>
+
+        <article class="card" data-category="crochet">
+          <div class="card__thumb">
+            <iframe
+              src="https://www.youtube.com/embed/GurLkFSLhFI"
+              title="코바늘 기초 사슬뜨기"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="card__body">
+            <div class="card__meta">
+              <span class="badge badge--intro">입문</span>
+              <span class="card__duration">15분</span>
+            </div>
+            <h3 class="card__title">코바늘 사슬뜨기와 짧은뜨기</h3>
+            <p class="card__desc">코바늘의 기본 중의 기본! 사슬뜨기와 짧은뜨기만 알아도 많은 걸 만들 수 있어요</p>
+          </div>
+        </article>
+
+        <article class="card" data-category="needle">
+          <div class="card__thumb">
+            <iframe
+              src="https://www.youtube.com/embed/FjIEe3Xp3XU"
+              title="겉뜨기 안뜨기 반복"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="card__body">
+            <div class="card__meta">
+              <span class="badge badge--basic">기초</span>
+              <span class="card__duration">18분</span>
+            </div>
+            <h3 class="card__title">고무뜨기 패턴 — 1x1, 2x2 리브</h3>
+            <p class="card__desc">겉뜨기·안뜨기를 반복하는 고무뜨기로 목도리·소매단에 사용되는 패턴 익히기</p>
+          </div>
+        </article>
+
+        <article class="card" data-category="crochet">
+          <div class="card__thumb">
+            <iframe
+              src="https://www.youtube.com/embed/mQCQH5dU5z0"
+              title="코바늘 원형뜨기"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="card__body">
+            <div class="card__meta">
+              <span class="badge badge--basic">기초</span>
+              <span class="card__duration">20분</span>
+            </div>
+            <h3 class="card__title">코바늘 원형뜨기 — 마법의 원 시작법</h3>
+            <p class="card__desc">컵받침, 모자, 가방 등 원형 작품의 시작인 매직 링 만드는 법</p>
+          </div>
+        </article>
+
+        <article class="card" data-category="needle">
+          <div class="card__thumb">
+            <iframe
+              src="https://www.youtube.com/embed/4eTZlvmABhA"
+              title="코 줄이기 늘리기"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="card__body">
+            <div class="card__meta">
+              <span class="badge badge--beginner">초급</span>
+              <span class="card__duration">25분</span>
+            </div>
+            <h3 class="card__title">코 늘리기·줄이기로 형태 만들기</h3>
+            <p class="card__desc">평면 조각을 입체 형태로 만드는 코 늘리기(yo)와 코 줄이기(k2tog) 기법</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section--sand" id="faq">
+    <div class="container">
+      <h2 class="section__title">자주 묻는 질문</h2>
+      <p class="section__desc">처음 시작할 때 누구나 헷갈리는 것들, 여기서 해결하세요</p>
+
+      <div class="accordion">
+
+        <div class="accordion__item">
+          <button class="accordion__header" aria-expanded="false">
+            <span class="accordion__num">01</span>
+            <span class="accordion__question">대바늘과 코바늘, 어떤 것부터 배워야 할까요?</span>
+            <span class="accordion__icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion__body">
+            <p>일반적으로 <strong>코바늘을 먼저 추천</strong>해요. 바늘 하나로 진행되어 구조가 더 직관적이고, 코가 풀려도 쉽게 되돌릴 수 있거든요. 단, 목도리·스웨터처럼 패브릭 느낌 작품을 원한다면 대바늘부터 시작해도 좋아요. 둘 다 어렵지 않으니 관심 가는 작품을 먼저 따라가는 것이 가장 중요해요!</p>
+          </div>
+        </div>
+
+        <div class="accordion__item">
+          <button class="accordion__header" aria-expanded="false">
+            <span class="accordion__num">02</span>
+            <span class="accordion__question">처음에 어떤 실과 바늘을 구매해야 하나요?</span>
+            <span class="accordion__icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion__body">
+            <p>입문자에게는 <strong>굵은 실(극태사 or 초극태사) + 큰 바늘(7~9mm)</strong>을 추천해요. 코가 크고 잘 보여서 실수를 쉽게 확인할 수 있거든요. 실 패키지에 권장 바늘 호수가 표기되어 있으니 그대로 구매하면 됩니다. 처음에는 밝은 단색 실을 고르면 기호를 파악하기가 훨씬 쉬워요.</p>
+          </div>
+        </div>
+
+        <div class="accordion__item">
+          <button class="accordion__header" aria-expanded="false">
+            <span class="accordion__num">03</span>
+            <span class="accordion__question">도안의 숫자와 기호가 무슨 의미인가요?</span>
+            <span class="accordion__icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion__body">
+            <p>도안의 <strong>숫자는 반복 횟수 또는 코 수</strong>를 나타내고, <strong>기호는 뜨는 방식</strong>을 나타내요. 예를 들어 "k2, p1"은 겉뜨기 2코, 안뜨기 1코를 뜻해요. 도안마다 앞장에 기호 범례가 있으니 꼭 확인하세요. 이 페이지의 <a href="#pattern">도안 보는 법</a> 섹션에서 주요 기호를 먼저 익혀두면 훨씬 수월해요!</p>
+          </div>
+        </div>
+
+        <div class="accordion__item">
+          <button class="accordion__header" aria-expanded="false">
+            <span class="accordion__num">04</span>
+            <span class="accordion__question">코가 자꾸 늘어나거나 줄어요, 왜 그런가요?</span>
+            <span class="accordion__icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion__body">
+            <p>가장 흔한 원인 두 가지예요. ① <strong>단의 첫 코를 두 번 뜨는 경우</strong>: 바늘을 넘길 때 사슬코처럼 보이는 부분을 코로 착각해 뜨면 코가 늘어나요. ② <strong>마지막 코를 빠뜨리는 경우</strong>: 단 끝 코가 잘 안 보여 놓치면 코가 줄어들어요. 매 단 시작 전후로 코 수를 세어보는 습관을 들이면 빠르게 교정할 수 있어요.</p>
+          </div>
+        </div>
+
+        <div class="accordion__item">
+          <button class="accordion__header" aria-expanded="false">
+            <span class="accordion__num">05</span>
+            <span class="accordion__question">유튜브 말고 오프라인으로 배울 수 있는 곳이 있나요?</span>
+            <span class="accordion__icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion__body">
+            <p>네! 오프라인 배움터가 생각보다 많아요. <strong>동네 문화센터(백화점·주민센터)</strong>에서 뜨개질 강좌를 주기적으로 운영하고, <strong>뜨개질 전문 공방</strong>에서 원데이 클래스도 열려요. 또한 <strong>지역 맘카페·공예 커뮤니티</strong>에서 스터디를 구하는 것도 좋은 방법이에요. 혼자 배울 때보다 질문을 바로 해결할 수 있어서 효율이 훨씬 높아요.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="footer__logo">실뭉치</span>
+      <span class="footer__copy">© 2025 실뭉치 — 뜨개질 시작하기. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
